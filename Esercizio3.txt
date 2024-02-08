@@ -1,0 +1,38 @@
+1)SELECT COUNT(*) FROM Orders
+
+2)SELECT COUNT(*) FROM Customers
+
+3)SELECT COUNT(*) FROM Customers
+ WHERE City = 'London'
+
+4)SELECT AVG(Freight) FROM Orders
+
+5)SELECT AVG(Freight) FROM Orders
+ WHERE CustomerID = 'BOTTM'
+
+6)SELECT CustomerId, SUM(Freight) from Orders
+ GROUP BY CustomerID
+
+7)SELECT City, COUNT(*) from Customers
+ GROUP BY City
+
+8)SELECT OrderId, SUM(UnitPrice * Quantity) AS PrezzoPerQuantita
+ FROM [Order Details]
+ GROUP BY OrderID
+
+9)SELECT OrderId, SUM(UnitPrice * Quantity) AS PrezzoPerQuantita
+ FROM [Order Details]
+ GROUP BY OrderID
+ HAVING OrderID = 10248
+
+10)SELECT CategoryID, COUNT(ProductID) AS ProdottiTotali 
+FROM Products
+GROUP BY CategoryID
+
+11)SELECT ShipCountry, COUNT(*) AS TotaleOrdini
+FROM Orders
+GROUP BY ShipCountry
+
+12)SELECT ShipCountry, AVG(Freight) AS Freight
+FROM Orders
+GROUP BY ShipCountry
